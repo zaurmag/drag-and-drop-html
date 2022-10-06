@@ -1,0 +1,41 @@
+.search
+    margin-bottom: 20px
+
+    &__form
+        position: relative
+        width: 564px
+
+        &-icon
+            display: block
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+            font-size: 14px
+
+        &-control
+            padding: 0 0 0 25px
+            border: none
+            border-bottom: 1px solid #bfc9e0
+            font-size: 15px
+            line-height: 1
+            width: 100%
+            transition: border-bottom-color .3s ease
+            height: 37px
+
+            &:focus
+                outline: none
+                border-bottom-color: $primary
+
+            &::placeholder
+                font-style: italic
+                color: $gray-600
+
+        &-reset
+            position: absolute
+            right: 0
+            top: 50%
+            transform: translateY(-50%)
+
+            .icon
+                font-size: 11px

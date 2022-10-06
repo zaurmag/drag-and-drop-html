@@ -1,0 +1,17 @@
+include ../../mixins/pug/index
+block variables
+    -
+        var baseDir = './';
+
+doctype html
+html(lang="ru")
+    //- Include head
+    include ./head
+
+    body
+        .page
+            .container
+                block columns
+
+        script(src=`${baseDir}js/main.js`)
+        block script

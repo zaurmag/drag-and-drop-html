@@ -1,0 +1,39 @@
+mixin doc(data = {})
+    if data.type === 'cat'
+        .docs__item-icon
+            +icon("i_chevron-down")
+
+    .docs__item-tlt= data.title
+
+    if data.status
+        .docs__item-status
+          each color in data.status
+              +indicator(color)
+
+    if data.required
+        .docs__item-req Обязательный
+
+    if data.text
+        .docs__item-txt!= data.text
+
+    .docs__item-buttons
+        button.btn.docs__item-btn.docs__item-btn--ed(type="button")
+            +icon("i_pen")
+        button.btn.docs__item-btn.docs__item-btn--del(type="button")
+            +icon("i_trash")
+        button.btn.docs__item-btn.docs__item-btn--mv(type="button")
+            +icon("i_move")
+
+mixin docs(data = {})
+    - var isCatClassName = data.type === 'cat' ? 'docs__item--cat' : ''
+    - var isOpenedClassName = data.isOpen ? ' is-active' : ''
+    .docs__item(class=`${isCatClassName + isOpenedClassName}`)
+        .docs__item-row
+            +doc(data)
+
+        if data.items
+            .docs__items
+                each item in data.items
+                    .docs__item
+                        .docs__item-row
+                            +doc(item)

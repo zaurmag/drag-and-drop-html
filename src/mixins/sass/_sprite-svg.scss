@@ -1,0 +1,33 @@
+@use "sass:math";
+
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+}
+
+.icon-i_bookmark {
+    width: (12 / 15) * 1em;
+}
+.icon-i_chevron-down {
+    width: (8 / 5) * 1em;
+}
+.icon-i_move {
+    width: (8 / 16) * 1em;
+}
+.icon-i_pen {
+    width: (14 / 14) * 1em;
+}
+.icon-i_plus {
+    width: (14 / 15) * 1em;
+}
+.icon-i_search {
+    width: (16 / 17) * 1em;
+}
+.icon-i_trash {
+    width: (13 / 15) * 1em;
+}
+.icon-i_x {
+    width: (12 / 12) * 1em;
+}

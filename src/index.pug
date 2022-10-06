@@ -1,0 +1,17 @@
+extends base/pug/base
+
+append variables
+    - var title = 'Drag and drop Documents'
+
+block columns
+    include ./components/header/header
+    include ./components/search/search
+
+    .docs
+        .docs__cats
+            each cat in docs
+                +docs(cat)
+
+        .docs__items
+            each item in items
+                +docs(item)
